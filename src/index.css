@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Lexend", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #0060ad;
+  --color-primary-container: #9ac3ff;
+  --color-on-primary: #f8f8ff;
+  --color-on-primary-container: #003d71;
+  
+  --color-secondary: #1f6d2c;
+  --color-secondary-container: #a5f6a4;
+  --color-on-secondary-container: #0a5f20;
+  
+  --color-tertiary: #7b5900;
+  --color-tertiary-container: #fdbc13;
+  --color-on-tertiary-fixed: #3b2900;
+
+  --color-surface: #fbf9f8;
+  --color-surface-container: #efeded;
+  --color-surface-container-low: #f5f3f3;
+  --color-surface-container-high: #e9e8e8;
+  --color-surface-container-highest: #e3e2e2;
+  --color-surface-container-lowest: #ffffff;
+  
+  --color-on-surface: #313333;
+  --color-on-surface-variant: #5e5f5f;
+  
+  --color-outline-variant: #b2b2b2;
+
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-headline;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lexend:wght@300;400;500;600&display=swap');
+
+.hero-gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-container) 100%);
+}
+
+.glass-header {
+  @apply bg-surface/80 backdrop-blur-xl sticky top-0 z-50;
+}
+
+.ambient-shadow {
+  box-shadow: 0 20px 40px rgba(49, 51, 51, 0.06);
+}
